@@ -38,8 +38,44 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
+-- pyright lsp config
 lspconfig.pyright.setup({
   on_attach = on_attach
 })
 
-require("clangd_extensions").setup()
+-- clangd lsp config with clangd_extensions
+require("clangd_extensions").setup({
+  server = {
+    cmd = {
+      "clangd",
+      "--background-index",
+      "--pch-storage=memory",
+      "--clang-tidy",
+      "--completion-style=detailed",
+    },
+    init_options = {
+      clangdFileStatus = true,
+      usePlaceholders = true,
+      completeUnimported = true,
+      semanticHighlighting = true,
+    },
+  },
+})
+
+-- lua lsp config
+lspconfig.lua_ls.setup({
+  on_attach = on_attach 
+})
+
+lspconfig.cmake.setup({
+  on_attach = on_attach
+})
+
+lspconfig.jsonls.setup({
+  on_attach = on_attach
+})
+
+lspconfig.bashls.setup({
+  on_attach = on_attach
+})
+
