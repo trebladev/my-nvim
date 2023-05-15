@@ -48,8 +48,12 @@ return require('packer').startup(function(use)
         use 'saadparwaiz1/cmp_luasnip'
         use 'onsails/lspkind-nvim' -- vscode-like pictograms
 
+        -- lsp installer 
         use { 'williamboman/mason.nvim' }
         use { 'williamboman/mason-lspconfig.nvim'}
+        
+        -- clangd extensions
+        use "p00f/clangd_extensions.nvim"
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if packer_bootstrap then
