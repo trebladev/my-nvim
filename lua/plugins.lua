@@ -12,7 +12,7 @@ local ensure_packer = function()
 end
 local packer_bootstrap = ensure_packer()
 
-
+require("plugins.init")
 -- Reload configurations if we modify plugins.lua
 -- Hint
 --     <afile> - replaced with the filename of the buffer being manipulated
@@ -54,6 +54,15 @@ return require('packer').startup(function(use)
         
         -- clangd extensions
         use "p00f/clangd_extensions.nvim"
+
+        -- neovim tree
+        use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+
+        -- telescope
+        use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
+
+        -- nvim-treesitter
+        -- use({ "nvim-treesitter/nvim-treesitter", run = ':TSUpdate'})
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if packer_bootstrap then

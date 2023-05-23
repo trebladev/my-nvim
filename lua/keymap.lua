@@ -14,3 +14,12 @@ map("i", "<C-h>", "<left>", opt)
 map("i", "<C-l>", "<right>", opt)
 
 map("n", "<leader>v", "<C-v>", opt)
+
+-- key for open neovim tree
+map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
+
+-- Telescope
+-- 查找文件
+map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+-- 全局搜索
+map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
