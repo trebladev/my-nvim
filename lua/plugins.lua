@@ -69,6 +69,9 @@ return require('packer').startup(function(use)
         use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
         use("arkav/lualine-lsp-progress")
 
+        -- auto pairs
+        use {	"windwp/nvim-autopairs"}
+
         -- nvim-treesitter
         -- use({ "nvim-treesitter/nvim-treesitter", run = ':TSUpdate'})
         -- Automatically set up your configuration after cloning packer.nvim
