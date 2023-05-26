@@ -64,6 +64,11 @@ return require('packer').startup(function(use)
         -- buffer line
         use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
 
+        -- lualine
+        -- lualine (新增)
+        use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
+        use("arkav/lualine-lsp-progress")
+
         -- nvim-treesitter
         -- use({ "nvim-treesitter/nvim-treesitter", run = ':TSUpdate'})
         -- Automatically set up your configuration after cloning packer.nvim
