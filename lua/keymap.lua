@@ -23,3 +23,7 @@ map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 -- 全局搜索
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+
+-- Neovim tree
+map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
+

@@ -12,7 +12,7 @@ local ensure_packer = function()
 end
 local packer_bootstrap = ensure_packer()
 
-require("plugins.init")
+-- require("plugins.init")
 -- Reload configurations if we modify plugins.lua
 -- Hint
 --     <afile> - replaced with the filename of the buffer being manipulated
