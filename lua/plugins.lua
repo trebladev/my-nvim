@@ -61,6 +61,9 @@ return require('packer').startup(function(use)
         -- telescope
         use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
 
+        -- buffer line
+        use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
+
         -- nvim-treesitter
         -- use({ "nvim-treesitter/nvim-treesitter", run = ':TSUpdate'})
         -- Automatically set up your configuration after cloning packer.nvim

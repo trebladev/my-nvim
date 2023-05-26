@@ -27,3 +27,11 @@ map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 -- Neovim tree
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 
+-- buffer line 
+-- 左右Tab切换
+map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<C-w>", ":Bdelete!<CR>", opt)
+map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
+map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
+map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
