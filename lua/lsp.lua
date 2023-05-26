@@ -43,24 +43,25 @@ lspconfig.pyright.setup({
   on_attach = on_attach
 })
 
+require("lspconfig").clangd.setup({})
 -- clangd lsp config with clangd_extensions
-require("clangd_extensions").setup({
-  server = {
-    cmd = {
-      "clangd",
-      "--background-index",
-      "--pch-storage=memory",
-      "--clang-tidy",
-      "--completion-style=detailed",
-    },
-    init_options = {
-      clangdFileStatus = true,
-      usePlaceholders = true,
-      completeUnimported = true,
-      semanticHighlighting = true,
-    },
-  },
-})
+-- require("clangd_extensions").setup({
+--   server = {
+--     cmd = {
+--       "clangd",
+--       "--background-index",
+--       "--pch-storage=memory",
+--       "--clang-tidy",
+--       "--completion-style=detailed",
+--     },
+--     init_options = {
+--       clangdFileStatus = true,
+--       usePlaceholders = true,
+--       completeUnimported = true,
+--       semanticHighlighting = true,
+--     },
+--   },
+-- })
 
 -- lua lsp config
 lspconfig.lua_ls.setup({
