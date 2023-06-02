@@ -7,7 +7,7 @@ vim.g.maplocalleader = " "
 
 map("i", "jj", "<ESC>", opt)
 -- jump out the bracket quickly
-map("i", "ll", "<ESC>lA", opt)
+map("i", "ll", "<ESC>la", opt)
 map("i", "<C-j>", "<down>", opt)
 map("i", "<C-k>", "<up>", opt)
 map("i", "<C-h>", "<left>", opt)
